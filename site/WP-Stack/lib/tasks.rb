@@ -6,6 +6,9 @@ namespace :shared do
 		run "if [ ! -h #{release_path}/shared ]; then ln -s #{shared_path}/files/ #{release_path}/shared; fi"
 		run "for p in `find -L #{release_path} -type l`; do t=`readlink $p | grep -o 'shared/.*$'`; mkdir -p #{release_path}/$t; chown carldetorres.com:carldetorres.com #{release_path}/$t; done"
 	end
+	task :fix_symlink do
+    run "cd #{deploy_to} && rm -f #{current_dir} && ln -s #{version_dir}/#{release_name} #{current_dir}"
+  end
 end
 
 namespace :nginx do

@@ -9,6 +9,7 @@ after "deploy:update", "deploy:cleanup"
 after "deploy:update_code", "shared:make_shared_dir"
 after "deploy:update_code", "shared:make_symlinks"
 after "deploy:update_code", "db:make_config"
+after "deploy:create_symlink", "shared:fix_symlink"
 #after "deploy", "memcached:update"
 
 # Pull in the config file
