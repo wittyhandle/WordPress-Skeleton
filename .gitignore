@@ -1,3 +1,5 @@
+*.sass-cache*
+compass_app_log.txt
 /shared
 /site/local-config.php
 /sql-dump-*.sql
