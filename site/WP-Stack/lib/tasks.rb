@@ -4,7 +4,7 @@ namespace :shared do
 	end
 	task :make_symlinks do
 		run "if [ ! -h #{release_path}/shared ]; then ln -s #{shared_path}/files/ #{release_path}/shared; fi"
-		run "for p in `find -L #{release_path} -type l`; do t=`readlink $p | grep -o 'shared/.*$'`; sudo mkdir -p #{release_path}/$t; sudo chown www-data:www-data #{release_path}/$t; done"
+		run "for p in `find -L #{release_path} -type l`; do t=`readlink $p | grep -o 'shared/.*$'`; mkdir -p #{release_path}/$t; chown carldetorres.com:carldetorres.com #{release_path}/$t; done"
 	end
 end
 
@@ -70,7 +70,7 @@ namespace :db do
 	task :make_config do
 		set :staging_domain, '' unless defined? staging_domain
 		{:'%%WP_STAGING_DOMAIN%%' => staging_domain, :'%%WP_STAGE%%' => stage, :'%%DB_NAME%%' => wpdb[stage][:name], :'%%DB_USER%%' => wpdb[stage][:user], :'%%DB_PASSWORD%%' => wpdb[stage][:password], :'%%DB_HOST%%' => wpdb[stage][:host]}.each do |k,v|
-			run "sed -i 's/#{k}/#{v}/' #{release_path}/wp-config.php", :roles => :web
+			run "sed -i 's/#{k}/#{v}/' #{release_path}/site/wp-config.php", :roles => :web
 		end
 	end
 end
