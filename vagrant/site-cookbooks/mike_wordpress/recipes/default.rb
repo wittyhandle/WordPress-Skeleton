@@ -40,3 +40,13 @@ web_app "wordpress" do
   server_name node['fqdn']
   server_aliases node['wordpress']['server_aliases']
 end
+
+file "#{node['wordpress']['dir']}/content/uploads" do
+  action :delete
+end
+
+link "#{node['wordpress']['dir']}/content/uploads" do
+  owner "vagrant"
+  group "vagrant"
+  to "#{node['wordpress']['dir']}/shared/content/uploads"
+end  

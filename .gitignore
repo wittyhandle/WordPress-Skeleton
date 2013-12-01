@@ -1,10 +1,11 @@
 *.sass-cache*
 compass_app_log.txt
-/shared
+/site/shared
 /site/local-config.php
 /sql-dump-*.sql
 /db-sync
-/content/upgrade/
+/site/content/upgrade/
 .DS_Store
 /vagrant/.vagrant
 /site/.htaccess
+/site/content/uploads
