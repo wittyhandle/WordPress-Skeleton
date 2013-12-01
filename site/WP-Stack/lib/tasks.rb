@@ -8,7 +8,7 @@ namespace :shared do
 	end
 	task :fix_symlink do
     run "cd #{deploy_to} && rm -f #{current_dir} && ln -s #{version_dir}/#{release_name} #{current_dir}"
-    run "cd #{current_path}/site/content && ln -s #{shared_path}/content/uploads uploads"
+    run "cd #{current_path}/site/content && ln -s ../../../../shared/files uploads"
   end
 end
 
