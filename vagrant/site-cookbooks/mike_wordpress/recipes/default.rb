@@ -48,5 +48,5 @@ end
 link "#{node['wordpress']['dir']}/content/uploads" do
   owner "vagrant"
   group "vagrant"
-  to "#{node['wordpress']['dir']}/shared/content/uploads"
+  to "../../shared/content/uploads"
 end  
