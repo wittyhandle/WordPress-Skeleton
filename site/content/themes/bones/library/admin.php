@@ -128,4 +128,16 @@ function bones_custom_admin_footer() {
 // adding it to the admin area
 add_filter( 'admin_footer_text', 'bones_custom_admin_footer' );
 
+/*
+ * Admin styling & scripts
+ *
+*/
+add_action( 'admin_enqueue_scripts', 'load_admin_scripts_and_style' );
+function load_admin_scripts_and_style() 
+{
+	wp_register_style( 'storytk-admin', get_stylesheet_directory_uri() . '/library/css/admin/storytk-admin.css', array(), '', 'all' );
+	wp_enqueue_style( 'storytk-admin' );
+}	
+
+
 ?>

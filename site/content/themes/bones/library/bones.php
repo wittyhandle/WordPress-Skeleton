@@ -368,4 +368,36 @@ function bones_get_the_author_posts_link() {
 	return $link;
 }
 
+/**********************
+StoryTK customizations
+**********************/
+/**
+* Loads the javascript used for supporting the custom wpalchemy-based metaboxes for media uploads on the edit-project
+* page.
+*/
+function load_wpa_project_lib() 
+{
+	wp_register_script( 'wpalchemy-storytk-lib', get_stylesheet_directory_uri() . '/library/js/wpalchemy-storytk-lib.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'wpalchemy-storytk-lib' );
+}
+
+/**********************
+Ajax
+**********************/
+
+add_action( 'wp_ajax_nopriv_thumbnail-spec', 'storytk_thumbnail_spec' );
+add_action( 'wp_ajax_thumbnail-spec', 'storytk_thumbnail_spec' );
+function storytk_thumbnail_spec()
+{	 
+	$mediaId = $_POST['media_id'];
+	$dimension = $_POST['dimension'];
+	
+	header( "Content-Type: application/json" );
+	echo json_encode(wp_get_attachment_image_src($mediaId, array($dimension, $dimension)));
+ 
+	exit;
+}
+
+
+
 ?>

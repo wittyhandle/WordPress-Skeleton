@@ -43,7 +43,7 @@ require_once( 'library/admin.php' ); // this comes turned off by default
 /************* WPAlchemy includes ****************/
 include_once 'metaboxes/setup.php';
 
-#include_once 'metaboxes/foo-spec.php';
+include_once 'metaboxes/splash-image-spec.php';
 
 /*
 4. library/translation/translation.php

@@ -1,0 +1,36 @@
+/* line 1, ../../scss/admin/storytk-admin.scss */
+.storytk-selected-thumbnail {
+  display: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* line 7, ../../scss/admin/storytk-admin.scss */
+p.image-label {
+  clear: both;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 1em 0;
+}
+
+/* line 14, ../../scss/admin/storytk-admin.scss */
+.fields-block {
+  width: 90%;
+  float: left;
+}
+
+/* line 19, ../../scss/admin/storytk-admin.scss */
+.thumbnail-block {
+  float: right;
+}
+
+/* line 23, ../../scss/admin/storytk-admin.scss */
+.single-media {
+  overflow: auto;
+  border: 1px dotted #ccc;
+  padding: 5px;
+}
+/* line 29, ../../scss/admin/storytk-admin.scss */
+.single-media .fields-block a {
+  margin-bottom: 10px;
+}
