@@ -9,3 +9,4 @@ compass_app_log.txt
 /vagrant/.vagrant
 /site/.htaccess
 /site/content/uploads
+debug.log
