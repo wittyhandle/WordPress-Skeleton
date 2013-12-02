@@ -4,9 +4,9 @@ jQuery(function($)
 	{
 		var that = jQuery(this);
 		jQuery.post(
-			'/wp-admin/admin-ajax.php',
+			'/wp/wp-admin/admin-ajax.php',
 			{
-				action: 'storytk_thumbnail_spec',
+				action: 'storytk-thumbnail-spec',
 				media_id: that.val(),
 				dimension: 75
 			},

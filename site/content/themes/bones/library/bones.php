@@ -375,7 +375,7 @@ StoryTK customizations
 * Loads the javascript used for supporting the custom wpalchemy-based metaboxes for media uploads on the edit-project
 * page.
 */
-function load_wpa_project_lib() 
+function load_wpa_storytk_lib() 
 {
 	wp_register_script( 'wpalchemy-storytk-lib', get_stylesheet_directory_uri() . '/library/js/wpalchemy-storytk-lib.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'wpalchemy-storytk-lib' );
@@ -385,10 +385,10 @@ function load_wpa_project_lib()
 Ajax
 **********************/
 
-add_action( 'wp_ajax_nopriv_thumbnail-spec', 'storytk_thumbnail_spec' );
-add_action( 'wp_ajax_thumbnail-spec', 'storytk_thumbnail_spec' );
+add_action( 'wp_ajax_nopriv_storytk-thumbnail-spec', 'storytk_thumbnail_spec' );
+add_action( 'wp_ajax_storytk-thumbnail-spec', 'storytk_thumbnail_spec' );
 function storytk_thumbnail_spec()
-{	 
+{
 	$mediaId = $_POST['media_id'];
 	$dimension = $_POST['dimension'];
 	
