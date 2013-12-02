@@ -1789,15 +1789,10 @@ you can add resource intensive styles.
   
   ******************************************************************/
   /* line 12, ../scss/_1030up.scss */
-  body {
-    margin: 0;
-  }
-
-  /* line 16, ../scss/_1030up.scss */
   #container {
     width: 100%;
   }
-  /* line 20, ../scss/_1030up.scss */
+  /* line 16, ../scss/_1030up.scss */
   #container img {
     width: 1280px;
     display: block;
@@ -1805,7 +1800,7 @@ you can add resource intensive styles.
     margin-right: auto;
   }
 
-  /* line 29, ../scss/_1030up.scss */
+  /* line 25, ../scss/_1030up.scss */
   .blue {
     background-color: #00C8FF;
     width: 100%;
@@ -1813,7 +1808,7 @@ you can add resource intensive styles.
     margin-top: -254px;
   }
 
-  /* line 36, ../scss/_1030up.scss */
+  /* line 32, ../scss/_1030up.scss */
   .incognito {
     display: none;
   }
