@@ -60,7 +60,8 @@ define( 'WP_DEBUG_DISPLAY', false );
 // Debugging? Enable these. Can also enable them in local-config.php
 // =================================================================
 // define( 'SAVEQUERIES', true );
-// define( 'WP_DEBUG', true );
+//define( 'WP_DEBUG', true );
+//define('WP_DEBUG_LOG', true);
 
 // ======================================
 // Load a Memcached config if we have one
