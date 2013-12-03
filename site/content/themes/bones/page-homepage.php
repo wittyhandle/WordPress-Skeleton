@@ -4,8 +4,11 @@ Template Name: Home Page
 */
 ?>
 
-<?php get_header(); ?>
-	<img src="http://storytk.com/images/splash.png" usemap="#contact"/>
+<? get_header(); ?>
+	
+	<? $splash_image_metabox->the_meta(); ?>
+	<?= sprintf('<img src="%s" usemap="#contact"/>', $splash_image_metabox->get_the_value('splash')); ?>
+
 	<map name="contact">
 		<area shape="rect" coords="710,750,575,730" href="mailto:carl@storytk.com" alt="Contact">
 	</map>
@@ -20,5 +23,5 @@ Template Name: Home Page
 		Some stories are just big old hairballs waiting to be figured out.
 		What’s your story?
 	</div>
-<?php get_footer(); ?>
+<? get_footer(); ?>
 
