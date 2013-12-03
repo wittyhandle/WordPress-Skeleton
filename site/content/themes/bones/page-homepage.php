@@ -10,7 +10,8 @@ Template Name: Home Page
 	<?= sprintf('<img src="%s" usemap="#contact"/>', $splash_image_metabox->get_the_value('splash')); ?>
 
 	<map name="contact">
-		<area shape="rect" coords="710,750,575,730" href="mailto:carl@storytk.com" alt="Contact">
+		<? $splash_email_metabox->the_meta(); ?>
+		<area shape="rect" coords="710,750,575,730" href="mailto:<?= $splash_email_metabox->get_the_value('email'); ?>" alt="Contact">
 	</map>
 	<div class="blue"></div>
 	

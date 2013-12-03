@@ -44,6 +44,7 @@ require_once( 'library/admin.php' ); // this comes turned off by default
 include_once 'metaboxes/setup.php';
 
 include_once 'metaboxes/splash-image-spec.php';
+include_once 'metaboxes/splash-email-spec.php';
 
 /*
 4. library/translation/translation.php
